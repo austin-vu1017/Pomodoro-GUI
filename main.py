@@ -28,13 +28,13 @@ def start_sw():
 
     if reps == 8:
         timer_label.config(text="Break", fg=RED, bg=YELLOW, font=(FONT_NAME, 50, "bold"))
-        stopwatch(LONG_BREAK_MIN)
+        stopwatch(LONG_BREAK_MIN * 60)
     elif reps % 2 == 0:
         timer_label.config(text="Break", fg=PINK, bg=YELLOW, font=(FONT_NAME, 50, "bold"))
-        stopwatch(SHORT_BREAK_MIN)
+        stopwatch(SHORT_BREAK_MIN * 60)
     else:
         timer_label.config(text="Work", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 50, "bold"))
-        stopwatch(WORK_MIN)
+        stopwatch(WORK_MIN * 60)
 
 def stopwatch(count):
     global reps
